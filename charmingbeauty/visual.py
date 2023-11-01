@@ -353,7 +353,7 @@ def set_style_default():
           'ytick.right': False,
     }
     matplotlib.rcParams.update(default_style)
-    Logger.info("Set matplotlib hepbasestack-default style!")
+    Logger.info("Set plot style charmingbeauty-default!")
 
 #######################################################################################################
 
@@ -687,5 +687,29 @@ def set_style_present():
         }  
 
     matplotlib.rcParams.update(present_style)
-    Logger.info("Set matplotlib hepbasestack-present style!")
+    Logger.info("Set plot style charmingbeauty-present!")
+
+def set_style_poster():
+    style = {\
+            '_internal.classic_mode' : False,
+            'axes.grid': True,
+            'axes.grid.axis': 'both',
+            'axes.grid.which': 'major',
+            'axes.labelcolor': 'black',
+            'axes.labelpad': 4.0,
+            'axes.labelsize': 12.0,
+            'axes.labelweight': 'normal',
+            'axes.linewidth': 2.0,
+            'axes.prop_cycle': cycler('color', ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']),
+            'axes.spines.bottom': True,
+            'axes.spines.left': True,
+            'axes.spines.right': True,
+            'axes.spines.top': True,
+            'grid.alpha': 0.5,
+            'grid.color': 'black',
+            'grid.linestyle': '-.',
+            'grid.linewidth': 0.4
+            }
+    matplotlib.rcParams.update(style)
+    Logger.info("Set plot style charmingbeauty-poster!")
 
