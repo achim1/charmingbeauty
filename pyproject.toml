@@ -1,16 +1,38 @@
-[tool.poetry]
+[project]
 name = "charmingbeauty"
-version = "0.1.1"
+version = "0.1.6"
 description = "Beautiful plots for high energy physics (and else)"
-authors = ["Achim Stoessl <achim.stoessl@gmail.com>"]
-license = "GPL-3"
 readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "GPL-3" }
+authors = [
+    { name = "Achim Stoessl", email = "achim.stoessl@gmail.com" }
+]
+# Keywords help people find your library on PyPI
+keywords = ["data-analysis", "api-wrapper", "utility"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "matplotli>=3.7.1",
+]
 
-[tool.poetry.dependencies]
-python = "^3.6"
-matplotlib = "^3.8.1"
-
+[project.urls]
+Homepage = "https://github.com/achim1/charmingbeauty"
+#Documentation = "https://your-project.readthedocs.io"
+Repository = "https://github.com/charmingbeauty/charmingbeauty.git"
+Issues = "https://github.com/achim1/charmingbeuty/issues"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+# If your code is in a 'src' folder, specify it here
+packages = ["src/charmingbeauty"]

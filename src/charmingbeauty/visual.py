@@ -689,7 +689,12 @@ def set_style_present():
     matplotlib.rcParams.update(present_style)
     Logger.info("Set plot style charmingbeauty-present!")
 
+#######################################################################################################
+
 def set_style_poster():
+    """
+    Extra large axes and labels for a conference poster
+    """
     style = {\
             '_internal.classic_mode' : False,
             'axes.grid': True,
@@ -712,4 +717,29 @@ def set_style_poster():
             }
     matplotlib.rcParams.update(style)
     Logger.info("Set plot style charmingbeauty-poster!")
+
+#######################################################################################################
+
+def set_style_streamlit_dark():
+    """
+    For the dark theme as used in streamlit, adjust 
+    the matplotlib style so that created plots blend 
+    in seamslessly without frame 
+    """
+    style = {\
+      'text.color'        : '#FAFAFA',
+      'axes.labelcolor'   : '#FAFAFA',
+      'xtick.color'       : '#FAFAFA',
+      'ytick.color'       : '#FAFAFA',
+      'text.color'        : '#FAFAFA',
+      'axes.labelcolor'   : '#FAFAFA',
+      'xtick.color'       : '#FAFAFA',
+      'ytick.color'       : '#FAFAFA',
+      'grid.color'        : '#FAFAFA',
+      'axes.edgecolor'    : '#FAFAFA',
+      'savefig.facecolor' : '#0E1117',
+      'axes.facecolor'    : '#0E1117'
+    }
+    matplotlib.rcParams.update(style)
+    Logger.info("Set dark style for streamlit dark theme!")
 
